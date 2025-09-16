@@ -1,5 +1,5 @@
 fun main(args: Array<String>){
-
+    /*
     val DNI = "12332145E"
     var nombre: String = "Jorge"
     var edad: Number = 41;
@@ -21,8 +21,10 @@ fun main(args: Array<String>){
     var veces:Int = readln().toInt()
 
     saludar(nombre = nombre, veces= veces)
+     */
 
-
+    println("El resultado de la operación es ${sumaLambda(1,3)}")
+    println("H")
 
 }
 
@@ -34,4 +36,32 @@ fun saludar(nombre: String="Pepe", veces: Int=4) {
 }
 
 
-var sumaLambda: (Int, Int) -> Int =
+var sumaLambda: (Int, Int) -> Int = {op1, op2 -> op1+op2}
+
+fun sentenciaWhen(opcion: Int){
+    when(opcion){
+        1 -> {
+            println("Entrando por ejecucion de caso 1")
+        }
+        2..5 -> {
+            println("Entrando por ejecucion de caso 2 a 5")
+        }
+        !in 5..7 -> {
+            println("Entrando por ejecución de caso sin ser 5 y 7")
+        }
+        else -> {
+            println("Entrando por caso no contemplado")
+
+        }
+
+    }
+}
+
+fun sentenciaFor() {
+    for (item in 0..10 step 2){
+        println(item)
+    }
+    for (item in 10 downTo 0 step 2){
+
+    }
+}
