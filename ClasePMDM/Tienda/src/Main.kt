@@ -9,6 +9,7 @@ fun main() {
     // gorra.mostrarDatos()
     // camiseta.mostrarDatos()
     val listaProductos: Array<Producto?> = arrayOf(gorra, pantalones, zapatillas, cartera, camiseta)
+    val listaProductosTamanio: Array<Producto?> = arrayOfNulls(5)
     // listaProductos[0] = null
 
     /* FOREACH -> Recorrer y
@@ -22,9 +23,13 @@ fun main() {
         if (item?.id == 1)
             item = null
     }*/
+
+    /*
     for (i in 0..listaProductos.size-1){
         if (listaProductos[i]?.id == 1){
             listaProductos[i] = null
         }
-    }
+    }*/
+
+    Tienda()
 }
