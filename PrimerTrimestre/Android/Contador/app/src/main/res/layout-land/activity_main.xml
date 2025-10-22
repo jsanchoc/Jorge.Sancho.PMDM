@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="horizontal"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:layout_width="0dp"
+        android:layout_weight="0.5"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="0.1"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:text="@string/app_title"
+            android:textSize="25sp"
+
+            />
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="0.9"
+            android:text="0"
+            android:gravity="center"
+            android:textSize="150sp"
+            android:id="@+id/textoContador"
+
+            />
+
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="0dp"
+        android:layout_weight="0.5"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="0.25"
+            android:text="+"
+            android:textSize="50sp"
+            android:id="@+id/botonIncremento"
+            android:backgroundTint="@android:color/holo_green_dark"
+            />
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="0.25"
+            android:text="-"
+            android:textSize="50sp"
+            android:id="@+id/botonDecremento"
+            android:backgroundTint="@android:color/holo_green_dark"
+            />
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="0.25"
+            android:text="R"
+            android:textSize="50sp"
+            android:id="@+id/botonReseteo"
+            android:backgroundTint="@android:color/holo_blue_dark"
+            />
+        <EditText
+            android:id="@+id/editReset"
+            android:hint="@string/hint_edit_reset"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="0.25"
+            android:textSize="30sp"
+            android:gravity="center"
+            android:inputType="number"
+            />
+
+
+
+
+    </LinearLayout>
+
+
+
+
+
+</LinearLayout>

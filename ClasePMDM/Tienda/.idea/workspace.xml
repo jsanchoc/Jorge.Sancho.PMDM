@@ -5,9 +5,34 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="95c586f3-0831-4d99-89d5-15587c0745d0" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/../ConcesionarioHerencia/src/Main.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../ConcesionarioHerencia/src/model/Camion.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../ConcesionarioHerencia/src/model/Coche.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../ConcesionarioHerencia/src/model/Coleccionable.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../ConcesionarioHerencia/src/model/Electrico.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../ConcesionarioHerencia/src/model/Hibrido.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../ConcesionarioHerencia/src/model/Moto.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../ConcesionarioHerencia/src/model/Termico.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../ConcesionarioHerencia/src/model/Vehiculo.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/model/Categoria.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/model/Cliente.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/model/Producto.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/model/Tienda.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Videojuego/src/Main.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Videojuego/src/model/ClasificacionEdad.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Videojuego/src/model/Videojuego.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Videojuego/src/model/VideojuegoAccion.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../Examenes/Jorge_Sancho_PMyDM/src/Main.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../Examenes/Jorge_Sancho_PMyDM/src/model/Armas.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../Examenes/Jorge_Sancho_PMyDM/src/model/ArmasBiologicas.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../Examenes/Jorge_Sancho_PMyDM/src/model/ArmasTradicionales.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../Examenes/Jorge_Sancho_PMyDM/src/model/Superheroes.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../Examenes/Jorge_Sancho_PMyDM/src/model/SuperheroesHumanos.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../Examenes/Jorge_Sancho_PMyDM/src/model/SuperheroesMutantes.kt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Main.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/Main.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Producto.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/Producto.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Producto.kt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Tienda.kt" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -17,31 +42,36 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="Kotlin Class" />
         <option value="Kotlin File" />
+        <option value="Kotlin Class" />
       </list>
     </option>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/../.." />
   </component>
-  <component name="ProjectColorInfo"><![CDATA[{
-  "associatedIndex": 1
-}]]></component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 1
+}</component>
   <component name="ProjectId" id="336UJUO9a4D2T89tnjI3k4arlBG" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "Kotlin.MainKt.executor": "Run",
-    "ModuleVcsDetector.initialDetectionPerformed": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "RunOnceActivity.git.unshallow": "true",
-    "git-widget-placeholder": "main"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;Kotlin.MainKt.executor&quot;: &quot;Run&quot;,
+    &quot;ModuleVcsDetector.initialDetectionPerformed&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;main&quot;
   }
-}]]></component>
+}</component>
+  <component name="RecentsManager">
+    <key name="K2MoveDeclarationsDialog.RECENT_PACKAGE_KEY">
+      <recent name="model" />
+    </key>
+  </component>
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
       <changelist id="95c586f3-0831-4d99-89d5-15587c0745d0" name="Changes" comment="" />
