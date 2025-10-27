@@ -4,13 +4,13 @@ plugins {
 }
 
 android {
-    namespace = "com.example.calculator"
+    namespace = "com.example.formulario"
     compileSdk {
         version = release(36)
     }
 
     defaultConfig {
-        applicationId = "com.example.calculator"
+        applicationId = "com.example.formulario"
         minSdk = 26
         targetSdk = 36
         versionCode = 1
@@ -35,11 +35,6 @@ android {
     kotlinOptions {
         jvmTarget = "11"
     }
-
-    viewBinding{
-        enable = true
-    }
-
 }
 
 dependencies {
