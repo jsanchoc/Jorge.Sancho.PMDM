@@ -4,13 +4,13 @@ plugins {
 }
 
 android {
-    namespace = "com.example.formulario"
+    namespace = "com.example.wordle"
     compileSdk {
         version = release(36)
     }
 
     defaultConfig {
-        applicationId = "com.example.formulario"
+        applicationId = "com.example.wordle"
         minSdk = 26
         targetSdk = 36
         versionCode = 1
@@ -34,10 +34,6 @@ android {
     }
     kotlinOptions {
         jvmTarget = "11"
-    }
-
-    viewBinding{
-        enable = true
     }
 }
 

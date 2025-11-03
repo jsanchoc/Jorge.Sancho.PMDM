@@ -1,5 +1,5 @@
 package com.example.calculator
-
+import kotlin.math.*
 import android.os.Bundle
 import android.view.View
 import android.widget.Button
@@ -13,6 +13,8 @@ class MainActivity : AppCompatActivity(), View.OnClickListener {
     private var operador1 = 0.0
     private var operador = ""
     private var nuevoNumero = true
+
+    private var numeroPi = 3.1416
 
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -48,6 +50,18 @@ class MainActivity : AppCompatActivity(), View.OnClickListener {
         binding.botonDelete.setOnClickListener(this)
         binding.bontonAC.setOnClickListener(this)
         binding.botonIgual.setOnClickListener(this)
+        binding.botonPorcentaje.setOnClickListener(this)
+        binding.botonMasMenos.setOnClickListener(this)
+        binding.botonPotencia?.setOnClickListener(this)
+        binding.botonPotencia2?.setOnClickListener(this)
+        binding.botonPotencia3?.setOnClickListener(this)
+        binding.botonPi?.setOnClickListener(this)
+        binding.botonRaiz?.setOnClickListener(this)
+        binding.botonSeno?.setOnClickListener(this)
+        binding.botonCoseno?.setOnClickListener(this)
+        binding.botonTangente?.setOnClickListener(this)
+        binding.botonParentesisAbrir?.setOnClickListener(this)
+        binding.botonParentesisCerrar?.setOnClickListener(this)
     }
 
     override fun onClick(v: View?) {
@@ -68,8 +82,135 @@ class MainActivity : AppCompatActivity(), View.OnClickListener {
             binding.botonResta.id -> operar("-")
             binding.botonMultiplicacion.id -> operar("*")
             binding.botonDivision.id -> operar("/")
+            binding.botonPorcentaje.id -> aplicarPorcentaje()
+            binding.botonMasMenos.id -> cambiarSigno()
+            binding.botonPotencia?.id -> potenciarx()
+            binding.botonPotencia2?.id -> potenciara2()
+            binding.botonPotencia3?.id -> potenciara3()
+            binding.botonPi?.id -> pi()
+            binding.botonRaiz?.id -> calcularRaiz()
+            binding.botonSeno?.id -> calcularSeno()
+            binding.botonCoseno?.id -> calcularCoseno()
+            binding.botonTangente?.id -> calcularTangente()
+            binding.botonParentesisAbrir?.id -> abrirParentesis()
+            binding.botonParentesisCerrar?.id -> cerrarParentesis()
         }
 
+    }
+
+    private fun abrirParentesis() {
+        if (nuevoNumero || display == "0") {
+            display = "("
+            nuevoNumero = false
+        } else {
+            display += "("
+        }
+        binding.display.text = display
+    }
+
+    private fun cerrarParentesis() {
+        display += ")"
+        binding.display.text = display
+    }
+
+    private fun calcularSeno() {
+        if (display.isNotEmpty()) {
+            val valor = Math.toRadians(display.toDouble()) // convierte a radianes
+            val resultado = sin(valor)
+            display = resultado.toString()
+            binding.display.text = display
+        }
+    }
+
+    private fun calcularCoseno() {
+        if (display.isNotEmpty()) {
+            val valor = Math.toRadians(display.toDouble())
+            val resultado = cos(valor)
+            display = resultado.toString()
+            binding.display.text = display
+        }
+    }
+
+    private fun calcularTangente() {
+        if (display.isNotEmpty()) {
+            val valor = Math.toRadians(display.toDouble())
+            val resultado = tan(valor)
+            display = resultado.toString()
+            binding.display.text = display
+        }
+    }
+
+    private fun calcularRaiz() {
+        if (display.isNotEmpty()) {
+            val valor = sqrt(display.toDouble())
+            display = if (valor % 1 == 0.0)
+                valor.toInt().toString()
+            else
+                valor.toString()
+            binding.display.text = display
+        }
+    }
+
+    private fun pi() {
+        if (nuevoNumero || display == "0"){
+            display = Math.PI.toString()
+            nuevoNumero = false
+        } else{
+            display += "*${Math.PI}"
+        }
+        binding.display.text = "π"
+    }
+
+    private fun potenciara3() {
+        if (display.isNotEmpty()) {
+            val valor = display.toDouble().pow(3)
+            display = if (valor % 1 == 0.0)
+                valor.toInt().toString()
+            else
+                valor.toString()
+            binding.display.text = display
+        }
+    }
+
+    private fun potenciara2() {
+        if (display.isNotEmpty()) {
+            val valor = display.toDouble().pow(2)
+            display = if (valor % 1 == 0.0)
+                valor.toInt().toString()
+            else
+                valor.toString()
+            binding.display.text = display
+        }
+    }
+
+    private fun potenciarx() {
+        if (display.isNotEmpty()){
+            operador1 = display.toDouble()
+            operador = "^"
+            nuevoNumero = true
+        }
+    }
+
+    private fun cambiarSigno() {
+        if (display.isNotEmpty() && display != "0") {
+            val valor = display.toDouble() * -1
+            display = if (valor % 1 == 0.0)
+                valor.toInt().toString()
+            else
+                valor.toString()
+            binding.display.text = display
+        }
+    }
+
+    private fun aplicarPorcentaje() {
+        if (display.isNotEmpty()){
+            val valor = display.toDouble() / 100
+            display = if (valor % 1 == 0.0)
+                valor.toInt().toString()
+            else
+                valor.toString()
+            binding.display.text = display
+        }
     }
 
     private fun escribirNumero(num: String) {
@@ -126,6 +267,7 @@ class MainActivity : AppCompatActivity(), View.OnClickListener {
             "-" -> operador1 - operando2
             "*" -> operador1 * operando2
             "/" -> if (operando2 != 0.0) operador1 / operando2 else Double.NaN
+            "^" -> operador1.pow(operando2)
             else -> operando2
         }
 
