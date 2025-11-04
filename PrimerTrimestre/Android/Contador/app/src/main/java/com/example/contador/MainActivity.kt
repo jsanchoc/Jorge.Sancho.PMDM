@@ -35,7 +35,7 @@ class MainActivity : AppCompatActivity(), View.OnClickListener {
     }
 
     private fun acciones(){
-        /*binding.botonIncremento.setOnClickListener {
+        binding.botonIncremento.setOnClickListener {
             Snackbar.make(it,
                 "Pulsado incremento",
                 Snackbar.LENGTH_LONG).show()
@@ -44,7 +44,7 @@ class MainActivity : AppCompatActivity(), View.OnClickListener {
             Snackbar.make(it,
                 "Pulsado decremento",
                 Snackbar.LENGTH_LONG).show()
-        }*/
+        }
         binding.botonIncremento.setOnClickListener(this)
         binding.botonDecremento.setOnClickListener(this)
         binding.botonReseteo?.setOnClickListener(this)
