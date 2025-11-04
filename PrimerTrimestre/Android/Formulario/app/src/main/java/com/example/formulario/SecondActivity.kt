@@ -5,16 +5,19 @@ import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
+import com.example.formulario.databinding.ActivitySecondBinding
+import com.example.formulario.model.Usuario
 
 class SecondActivity : AppCompatActivity() {
+
+    lateinit var binding: ActivitySecondBinding
+    var usuarioRecuperado: Usuario? = null
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        enableEdgeToEdge()
-        setContentView(R.layout.activity_second)
-        ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.main)) { v, insets ->
-            val systemBars = insets.getInsets(WindowInsetsCompat.Type.systemBars())
-            v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom)
-            insets
-        }
+        binding = ActivitySecondBinding.inflate(layoutInflater)
+        setContentView(binding.root)
+        usuarioRecuperado = intent.getSerializableExtra("usuario") as Usuario
+        binding.textoMail.text = usuarioRecuperado?.mail?: "sin correo"
     }
 }

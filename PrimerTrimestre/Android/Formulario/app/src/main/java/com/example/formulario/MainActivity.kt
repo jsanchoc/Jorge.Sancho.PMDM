@@ -10,6 +10,9 @@ import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
 import com.example.formulario.databinding.ActivityMainBinding
+import com.example.formulario.model.Usuario
+import com.google.android.material.snackbar.Snackbar
+import kotlin.math.exp
 
 class MainActivity : AppCompatActivity(), View.OnClickListener{
 
@@ -27,6 +30,7 @@ class MainActivity : AppCompatActivity(), View.OnClickListener{
             val nombre = binding.name.text.toString()
             val mail = binding.mail.text.toString()
             val pass = binding.password.text.toString()
+            val location = binding.location.text.toString()
             val experiencia = binding.checkBox.isChecked
             lateinit var cantidad: String
             when (binding.grupoRadios.checkedRadioButtonId) {
@@ -39,7 +43,19 @@ class MainActivity : AppCompatActivity(), View.OnClickListener{
                 }
             }
             val estudios = binding.puesto.selectedItem
-            val intent: Intent = Intent(applicationContext, SecondActivity, )
+            if (nombre.isNotEmpty() && mail.isNotEmpty() && pass.isNotEmpty() && location.isNotEmpty()) {
+                if (mail == "admin@admin.com" && pass == "admin") {
+                    val intent: Intent = Intent(applicationContext, SecondActivity::class.java)
+                    val usuario = Usuario(nombre, pass, mail, location, estudios.toString(), experiencia.toString())
+                    intent.putExtra("usuario", usuario)
+                    // intent.putExtra("correo", mail)
+                    startActivity(intent)
+                } else{
+                    Snackbar.make(it, "Datos Incorrectos", Snackbar.LENGTH_SHORT).show()
+                }
+            } else {
+                Snackbar.make(it, "Faltan Datos", Snackbar.LENGTH_SHORT).show()
+            }
 
         }
         binding.checkBox.setOnCheckedChangeListener { view, data ->
@@ -80,3 +96,4 @@ class MainActivity : AppCompatActivity(), View.OnClickListener{
     override fun onClick(v: View?) {
         TODO("Not yet implemented")
     }
+}
