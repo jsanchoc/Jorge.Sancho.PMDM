@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">EtiquetaDGT</string>
+    <string-array name="tipo_gasolina">
+        <item>Diésel</item>
+        <item>Gasolina</item>
+        <item>Híbrido</item>
+        <item>Eléctrico</item>
+    </string-array>
+</resources>

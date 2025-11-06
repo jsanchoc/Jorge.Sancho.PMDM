@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:text="Comprueba Tu Etiqueta Medioambiental"
+        android:textSize="20sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <EditText
+        android:id="@+id/name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:hint="Nombre y Apellidos del Propietario"
+        android:gravity="center"
+        android:inputType="text"
+        android:layout_marginTop="70dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView" />
+
+    <EditText
+        android:id="@+id/matricula"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:hint="Matrícula"
+        android:gravity="center"
+        android:inputType="text"
+        android:layout_marginTop="10dp"
+        app:layout_constraintEnd_toEndOf="@+id/name"
+        app:layout_constraintStart_toStartOf="@+id/name"
+        app:layout_constraintTop_toBottomOf="@+id/name" />
+
+    <EditText
+        android:id="@+id/anoMatriculacion"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:hint="Año de Matriculación"
+        android:text=""
+        android:gravity="center"
+        android:inputType="number"
+        android:layout_marginTop="10dp"
+        app:layout_constraintEnd_toEndOf="@+id/matricula"
+        app:layout_constraintStart_toStartOf="@+id/matricula"
+        app:layout_constraintTop_toBottomOf="@+id/matricula" />
+
+    <Spinner
+        android:id="@+id/tipoGasolina"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:entries="@array/tipo_gasolina"
+        android:gravity="center"
+        app:layout_constraintEnd_toEndOf="@+id/anoMatriculacion"
+        app:layout_constraintStart_toStartOf="@+id/anoMatriculacion"
+        app:layout_constraintTop_toBottomOf="@+id/anoMatriculacion" />
+
+    <EditText
+        android:id="@+id/autonomia"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:hint="Autonomía"
+        android:gravity="center"
+        android:inputType="number"
+        android:layout_marginTop="10dp"
+        app:layout_constraintEnd_toEndOf="@+id/tipoGasolina"
+        app:layout_constraintStart_toStartOf="@+id/tipoGasolina"
+        app:layout_constraintTop_toBottomOf="@+id/tipoGasolina" />
+
+    <Button
+        android:id="@+id/boton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Comprobar"
+        android:layout_marginTop="30dp"
+        app:layout_constraintEnd_toEndOf="@+id/autonomia"
+        app:layout_constraintStart_toStartOf="@+id/autonomia"
+        app:layout_constraintTop_toBottomOf="@+id/autonomia" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
